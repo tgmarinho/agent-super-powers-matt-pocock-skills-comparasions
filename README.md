@@ -11,6 +11,7 @@ sample implementations, and notes used for the blog post:
 
 - PT-BR: https://tgmarinhopro.com/blog/superpowers-vs-agent-skills-vs-matt-pocock-skills-qual-usar
 - EN: https://tgmarinhopro.com/en/blog/superpowers-vs-agent-skills-vs-matt-pocock-skills-which-to-use
+- Evidence trail: [EVIDENCE.md](EVIDENCE.md)
 
 ## Main Takeaway
 
