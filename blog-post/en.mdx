@@ -48,6 +48,16 @@ I refreshed all three repositories on June 30, 2026 before writing this post. In
 | Debugging | Systematic debugging | Debugging and error recovery | `/diagnosing-bugs` |
 | Architecture | Planning and review | Design, docs, and ADRs | `/codebase-design` and `/improve-codebase-architecture` |
 
+## What evidence supports this reading?
+
+The primary evidence is in the skill files themselves, not in the benchmark. I documented the full trail in the comparison repo's [EVIDENCE.md](https://github.com/tgmarinho/agent-super-powers-matt-pocock-skills-comparasions/blob/main/EVIDENCE.md). The reading is:
+
+- **Matt Pocock's Skills:** `docs/invocation.md` separates human-invoked skills from model-invoked skills. Human-invoked skills are only reachable when a person types the command and they use `disable-model-invocation: true`. In the snapshot, there were 25 active skills and 13 human-invoked skills. That group includes `grill-me`, `grill-with-docs`, `to-prd`, `to-issues`, `triage`, `improve-codebase-architecture`, and `implement`. This supports the claim that it keeps more control with the human.
+- **Superpowers:** `brainstorming/SKILL.md` blocks implementation until the design is approved. After that, `README.md` and `subagent-driven-development/SKILL.md` tell the agent to create a plan, execute tasks with subagents, review each step, and avoid pausing between tasks unless blocked, genuinely ambiguous, or done. This supports the claim that it becomes more autonomous after approval.
+- **Agent Skills:** `README.md`, `using-agent-skills/SKILL.md`, and `spec-driven-development/SKILL.md` organize the pack around define, plan, build, verify, review, and ship, with 24 skills, human checkpoints, and `/build auto` for one approved implementation pass with verification. This supports the middle position.
+
+The local benchmark is secondary evidence. It helps show how those instructions appear in one controlled React task, but it does not prove general performance across all repositories, models, or prompts.
+
 ## What changes during a real feature?
 
 In a real feature, **Superpowers** tends to spend more time at the beginning. That is useful when there are architecture decisions, hidden risks, or real ambiguity. The cost appears when the task is small, because the ritual can become heavier than the problem.

@@ -19,6 +19,12 @@ Snapshot reviewed locally on 2026-07-01.
 - PT-BR: https://tgmarinhopro.com/blog/superpowers-vs-agent-skills-vs-matt-pocock-skills-qual-usar
 - EN: https://tgmarinhopro.com/en/blog/superpowers-vs-agent-skills-vs-matt-pocock-skills-which-to-use
 
+## Evidence Trail
+
+- [EVIDENCE.md](EVIDENCE.md) documents the source-file evidence behind the
+  main takeaway, including invocation rules, workflow gates, skill counts, and
+  benchmark support.
+
 ## Licensing Note
 
 The upstream snapshots preserve the original license files inside each

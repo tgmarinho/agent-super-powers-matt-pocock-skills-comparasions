@@ -26,12 +26,19 @@ The claim that motivated this comparison is mostly supported by the skill files:
   planning, implementation, UI, API, security, performance, docs, CI/CD,
   observability, and launch.
 
+See [EVIDENCE.md](EVIDENCE.md) for the source-file evidence behind these
+claims, including invocation rules, skill counts, workflow gates, and benchmark
+support.
+
 ## Repository Layout
 
 ```txt
 benchmarks/
   skill-benchmark/              # Full benchmark task and HTML implementations
   skill-framework-benchmark/    # Tabletop PRD, SPEC, implementation, and report
+
+EVIDENCE.md                     # Source-file evidence for the main takeaway
+SOURCES.md                      # Upstream repos, commits, and reference links
 
 blog-post/
   pt-BR.mdx                     # Portuguese post source snapshot
