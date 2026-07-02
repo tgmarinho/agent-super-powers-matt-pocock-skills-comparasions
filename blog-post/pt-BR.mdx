@@ -48,6 +48,16 @@ Eu atualizei os três repositórios em 30 de junho de 2026 antes de escrever est
 | Debugging | Systematic debugging | Debugging and error recovery | `/diagnosing-bugs` |
 | Arquitetura | Planejamento e revisão | Design, docs e ADRs | `/codebase-design` e `/improve-codebase-architecture` |
 
+## Quais evidências sustentam essa leitura?
+
+A evidência principal está nos próprios arquivos de skill, não no benchmark. Eu documentei o rastro completo no [EVIDENCE.md do repositório de comparação](https://github.com/tgmarinho/agent-super-powers-matt-pocock-skills-comparasions/blob/main/EVIDENCE.md). A leitura fica assim:
+
+- **Matt Pocock Skills:** `docs/invocation.md` separa skills invocadas pelo humano e skills invocadas pelo modelo. As skills invocadas pelo humano só são alcançadas quando a pessoa digita o comando e usam `disable-model-invocation: true`. No snapshot, eram 25 skills ativas e 13 invocadas pelo humano. Entre elas estão `grill-me`, `grill-with-docs`, `to-prd`, `to-issues`, `triage`, `improve-codebase-architecture` e `implement`. Isso sustenta a tese de mais controle humano.
+- **Superpowers:** `brainstorming/SKILL.md` bloqueia implementação até o design ser aprovado. Depois disso, `README.md` e `subagent-driven-development/SKILL.md` mandam o agente criar plano, executar tarefas com subagentes, revisar cada etapa e não pausar entre tarefas salvo bloqueio, ambiguidade real ou fim do plano. Isso sustenta autonomia depois da aprovação.
+- **Agent Skills:** `README.md`, `using-agent-skills/SKILL.md` e `spec-driven-development/SKILL.md` organizam o pacote em define, plan, build, verify, review e ship, com 24 skills, checkpoints humanos e `/build auto` para rodar uma passada aprovada com verificação. Isso sustenta a posição intermediária.
+
+O benchmark local é evidência secundária. Ele ajuda a observar como essas instruções aparecem em uma tarefa React controlada, mas não prova desempenho geral em todos os repositórios, modelos ou prompts.
+
 ## O que muda durante uma feature real?
 
 Em uma feature real, **Superpowers** tende a gastar mais tempo no começo. Isso é bom quando ainda existem decisões arquiteturais, riscos escondidos ou muita ambiguidade. O custo aparece quando a tarefa é pequena, porque o ritual pode pesar mais que o problema.
